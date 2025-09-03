@@ -1,0 +1,5 @@
+{
+    "server": "server/server_main.py",
+    "methods": ["ping", "getTime"]
+}
+  
