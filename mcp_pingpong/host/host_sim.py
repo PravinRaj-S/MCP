@@ -1,14 +1,13 @@
-import os, sys # OS and sys for path operations
-sys.path.append(os.path.dirname(os.path.dirname(__file__))) # Add project root to sys.path for imports
+import os, sys 
+sys.path.append(os.path.dirname(os.path.dirname(__file__))) 
 
 
-from client.client_main import MCPClient # Import the MCPClient from the client package
+from client.client_main import MCPClient 
 
 
-if __name__ == "__main__": # Only run when executed directly
-# Start client pointing to server
-    client = MCPClient("server/server_main.py") # Tell client which server script to spawn
+if __name__ == "__main__": 
+    client = MCPClient("server/server_main.py") 
 
 
-print("Host calling ping:", client.send_request("ping")) # Call method "ping" -> expect "pong"
+print("Host calling ping:", client.send_request("ping")) 
 print("Host calling getTime:", client.send_request("getTime"))
